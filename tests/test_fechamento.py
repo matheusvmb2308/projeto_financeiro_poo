@@ -24,4 +24,10 @@ class TestFechamento:
         fechamento = Fechamento()
         assert fechamento.quantidade_lancamentos() == 0
         assert fechamento.calculaTotal() == 0.0
-        
+    def teste_adiciona_lancamento_invalido(self) -> None:
+        fechamento = Fechamento()
+        try:
+            fechamento.adicionarLancamento("")
+            assert False
+        except TypeError:
+            pass

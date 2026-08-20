@@ -16,4 +16,4 @@ class Lancamento:
     def alterarData(self, novaData) -> None:
         self.data = novaData
     def __repr__(self) -> str:
-        return f"{self.descricao}"    
+        return f"Lançamento: {self.descricao}"    
