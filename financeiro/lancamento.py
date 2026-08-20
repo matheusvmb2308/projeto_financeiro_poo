@@ -15,4 +15,5 @@ class Lancamento:
         self.categoria = novaCategoria
     def alterarData(self, novaData) -> None:
         self.data = novaData
-        
+    def __repr__(self) -> str:
+        return f"{self.descricao}"    
