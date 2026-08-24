@@ -1,7 +1,7 @@
 class Conciliacao:
-    def __init__(self, debito, credito) -> None:
-        self.debitos = [debito]
-        self.creditos = [credito]
+    def __init__(self, debito: list, credito: list) -> None:
+        self.debitos = debito
+        self.creditos = credito
     def total_debitos(self) -> float:
         return sum(debito.valor for debito in self.debitos)
     def total_creditos(self) -> float:
