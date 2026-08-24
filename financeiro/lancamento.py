@@ -1,10 +1,13 @@
 from financeiro.categoria import Categoria
 class Lancamento: 
-    def __init__(self, descricao: str, valor: float, data: str, categoria: Categoria) -> None:
+    def __init__(self, descricao: str, valor: float, data: str, categoria: Categoria, tipo: str = "credito") -> None:
         self.descricao = descricao
         self.valor = valor
         self.data = data
         self.categoria = categoria
+        if tipo not in ("debito","credito"):
+            raise ValueError("Tipo deve ser debito ou crédito")
+        self.tipo = tipo
     def alterarValor(self, novoValor) -> None:
         if novoValor <= 0:
             raise ValueError("Valor abaixo de 0")
