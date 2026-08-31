@@ -14,7 +14,7 @@ class Fechamento:
             raise TypeError("Lancamento Inválido")
         self.lancamentos = [i for i in self.lancamentos if i is not lancamento]
     def calculaTotal(self) -> float:
-        return sum(fechamento.valor for fechamento in self.lancamentos)
+        return sum(lancamento.valor for lancamento in self.lancamentos)
     def quantidade_lancamentos(self) -> int:
         return len(self.lancamentos)
 if __name__ == "__main__":
